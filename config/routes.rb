@@ -1,4 +1,14 @@
 FirstApp::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/activities"
+
+  get "pages/myteam"
+
+  get "pages/signout"
+
+  get "pages/myaccount"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
