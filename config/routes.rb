@@ -1,4 +1,14 @@
 FirstApp::Application.routes.draw do
+  match '/about',   :to => 'pages#about'
+  match '/home',    :to => 'pages#home'
+  match '/signout',   :to => 'pages#signout'
+  match '/activities',    :to => 'pages#activities'
+  match '/myaccount',   :to => 'pages#myaccount'
+  match '/myteam',   :to => 'pages#myteam'
+ 
+  match '/help',    :to => 'pages#help'
+   match '/contact', :to => 'pages#contact'
+  
   get "pages/home"
 
   get "pages/activities"
@@ -58,7 +68,7 @@ FirstApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

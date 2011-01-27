@@ -18,5 +18,10 @@ class PagesController < ApplicationController
   def myaccount
      @title = "tivity My Account"
   end
+  
+  
+  def about
+     @title = "About tivity"
+  end
 
 end

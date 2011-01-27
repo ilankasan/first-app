@@ -1,5 +1,5 @@
 .container {
-  width: 710px;
+  width: 810px;
 }
 
 body {
@@ -12,7 +12,7 @@ header {
 
 header img {
   padding: 1em;
-  background: #FFFFCC;
+  background: #000000;
 }
 
 section {
@@ -91,7 +91,7 @@ a.signup_button {
   text-align: center;
   width: 190px;
   color: #fff;
-  background: #006400;
+  background: #0080FF;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
