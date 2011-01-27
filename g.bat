@@ -1,4 +1,4 @@
 git add .
-git commit -am "chapter 5.2.1"
+git commit -am "end of chapter 5"
 git push
 git push heroku
