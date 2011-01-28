@@ -1,5 +1,6 @@
 FirstApp::Application.routes.draw do
-  get "users/new"
+resources :pages  
+  #get "users/new"
   match '/signup',   :to => 'users#new'
   
   match '/about',   :to => 'pages#about'
@@ -21,6 +22,13 @@ FirstApp::Application.routes.draw do
   get "pages/signout"
 
   get "pages/myaccount"
+  
+  
+  
+  
+  resources :users
+
+  match '/signup',  :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
