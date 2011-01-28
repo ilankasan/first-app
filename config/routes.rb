@@ -10,6 +10,7 @@ resources :pages
  
   match '/help',    :to => 'pages#help'
    match '/contact', :to => 'pages#contact'
+  match '/myaccount', :to => 'pages#myaccount'
   
  # get "pages/home"
 
@@ -17,7 +18,7 @@ resources :pages
 
  # get "pages/myteam"
 
- # get "pages/signout"
+  get "pages/signout"
 
  # get "pages/myaccount"
   
@@ -27,7 +28,7 @@ resources :pages
   resources :users
   get "users/show"
   match '/signup',  :to => 'users#new'
-  match '/show',   :to => 'users#show'
+ # match '/show',   :to => 'users#show'
   
   
   # The priority is based upon order of creation:

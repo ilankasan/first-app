@@ -1,7 +1,8 @@
 git add .
-git commit -am "end of chapter 7 - f"
+git commit -am "end of chapter 7 V1 - f"
 git push
 git push heroku
 
 
 
+ 
