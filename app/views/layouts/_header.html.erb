@@ -12,8 +12,11 @@
           <tr>
            <nav class="round">
           <ul>
-            <li><%= link_to "my account", show_path %></li>
+            
             <li><%= link_to "sign out", signout_path %></li>
+            <li><%= link_to "My account", user_path(@user) %></li>
+            
+          
           </ul>
         </nav>
         </tr>
