@@ -1,5 +1,9 @@
 git add .
-git commit -am "end of chapter 7 V1 - f"
+git commit -am "complete sign up end of chapter 8"
+git checkout master
+git merge signing-up
+
+
 git push
 git push heroku
 
