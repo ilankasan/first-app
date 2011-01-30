@@ -5,6 +5,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <h1>
+      <%= link_to "Edit My Account", edit_user_path(current_user) %>
+      </h1>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />

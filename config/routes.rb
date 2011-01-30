@@ -33,6 +33,8 @@ resources :pages
   resources :users
   get "users/show"
   match '/signup',  :to => 'users#new'
+  match '/allusers',  :to => 'users#allusers'
+  
   
 #  match '/signup',  :to => 'users#new'
  # match '/show',   :to => 'users#show'

@@ -20,9 +20,10 @@
               
               <ul>
                 
-                
                <% if signed_in? %>
                   <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Users", allusers_path %></li> 
+               
                <% end %>
                 
                 <li><%= link_to "Help", help_path %></li>
