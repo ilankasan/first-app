@@ -1,4 +1,19 @@
 # == Schema Information
+# Schema version: 20110130082834
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#  admin              :boolean
+#
+
+# == Schema Information
 # Schema version: 20110127075729
 #
 # Table name: users
@@ -13,6 +28,8 @@ require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
+  
+  has_many :activities, :dependent => :destroy
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -51,6 +68,12 @@ class User < ActiveRecord::Base
     (user && user.salt == cookie_salt) ? user : nil
   end
   
+  
+  
+  def feed
+    # This is preliminary. See Chapter 12 for the full implementation. this is same at activities
+    Activity.where("user_id = ?", id)
+  end
   
   
 

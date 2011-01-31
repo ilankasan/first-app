@@ -203,3 +203,59 @@ ul.users {
 .users li {
   list-style: none;
 }
+
+/* activities */
+
+h1.activity {
+  margin-bottom: 0.3em;
+}
+
+table.activities {
+  margin-top: 1em;
+}
+
+table.activities tr {
+  height: 70px;
+}
+
+table.activities tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.activities tr td.activity {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.activities tr td.activity span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.activities {
+  font-size: 80%;
+}
+
+form.new_activity {
+  margin-bottom: 2em;
+}
+
+form.new_activity textarea {
+  height: 4em;
+  margin-bottom: 0;

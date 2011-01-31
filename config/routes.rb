@@ -1,10 +1,9 @@
 FirstApp::Application.routes.draw do
-#  get "sessions/new"
-
-
-
+  
   resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
+  resources :sessions,   :only => [:new, :create, :destroy]
+  resources :activities, :only => [:create, :destroy, :allactivities]
+
 
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
@@ -16,7 +15,7 @@ resources :pages
   match '/about',   :to => 'pages#about'
   match '/home',    :to => 'pages#home'
   match '/signout',   :to => 'pages#signout'
-  match '/activities',    :to => 'pages#activities'
+  #match '/activities',    :to => 'pages#activities'
   match '/myteam',   :to => 'pages#myteam'
  
   match '/help',    :to => 'pages#help'
