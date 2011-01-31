@@ -1,6 +1,9 @@
-<!-- Creat new Activity -->   
+
+<p>
+
+        <!-- Creat new Activity -->   
    
-<% if signed_in? %>
+     <% if signed_in? %>
       <table class="front" summary="For signed-in users">
         <tr>
         <td class="main">
@@ -9,11 +12,17 @@
         
         
         <!-- Display Current Activities -->   
-        <%= render 'shared/feed' %>
       
-     
+        <% unless current_user.activities.empty? %>
+                <table class="activities" summary="User tasks">
+                    <%= render current_user.activities %>
+                </table>
         
+        <% end %>
         </td>
+        
+        
+        
         
         
         <td class="sidebar round">
@@ -21,11 +30,12 @@
         </td>
     </tr>
   </table>
-<% else %>
+     <% else %>
         <%= link_to "Sign in", signin_path %>
      
         <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
-<% end %>
+     <% end %>
 
+</p>
 
 

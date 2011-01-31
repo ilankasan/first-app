@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
   
-  def home
+  def home 
+    @activity = Activity.new if signed_in?  
     @title = "Home"
-    if signed_in?
-      @activity = Activity.new
-      @feed_items = current_user.feed.paginate(:page => params[:page])
-    end
+    
+    
+    
+    
   end
   
   def activities
